@@ -133,3 +133,33 @@ const products = [
   ];
 
 // write code here
+
+// 1. Console Log All Products
+for (const item of products) {
+  console.log(`${item.title} - ${item.price}` )
+}
+
+// 2. Filter Products with Long Descriptions
+let shortItems = products.filter((item) => item.description.length < 30)
+console.log('Products with short Descriptions')
+console.log(shortItems)
+
+// 3. Products in Price Range $200-$400
+let selectedPriceRange = products.filter((item) => item.price >= 200 && item.price <= 400)
+console.log('Products in Price Range $200-$400')
+console.log(selectedPriceRange)
+
+// 4. Filter Discounted Products
+let discountedProducts = products.filter((item) => item.isDiscounted === true)
+console.log('Discounted Products')
+console.log(discountedProducts)
+
+// 5. Filter Products with 15% or More Discount
+let largeDiscounts = products.filter((item) => parseFloat(item.discount.discountAvailable) >= 15)
+console.log('Products with 15% or More Discount')
+console.log(largeDiscounts)
+
+// 6. Filter New Products
+let newProducts = products.filter((item) => item.year == 2024)
+console.log('New Products')
+console.log(newProducts)
