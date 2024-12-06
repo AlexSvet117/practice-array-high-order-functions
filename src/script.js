@@ -133,7 +133,6 @@ const products = [
   ];
 
 // write code here
-
 // 1. Console Log All Products
 for (const item of products) {
   console.log(`${item.title} - ${item.price}` )
